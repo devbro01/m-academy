@@ -17,6 +17,7 @@ const Home = () => {
 
 		const token = '7257311692:AAHwBW6Zq8-E3rrtBtZDE0KYdqOv24JouZw'
 		const chatID = '5425612601'
+		const chatID2 = '7294480566'
 		const message = `
 			🌟 🇾​​🇦​​🇳​​🇬​​🇮​ ​🇫​​🇴​​🇾​​🇩​​🇦​​🇱​​🇦​​🇳​​🇺​​🇻​​🇨​​🇭​​🇮​ ​🇭​​🇦​​🇧​​🇦​​🇷​​🇮​ 🌟
 
@@ -59,6 +60,15 @@ const Home = () => {
 				theme: 'light',
 				transition: Bounce,
 			})
+		}
+
+		try {
+			await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+				chat_id: chatID2,
+				text: message,
+			})
+		} catch {
+			console.log('error')
 		}
 	}
 
