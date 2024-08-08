@@ -1,0 +1,151 @@
+/* styles for pages */
+.hero {
+	display: flex;
+	padding-top: 50px;
+	width: 100%;
+	height: 50rem;
+	background-color: rgb(245, 255, 249);
+}
+
+.content {
+	display: flex;
+	gap: 150px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.hero-text {
+	color: #144460;
+}
+
+.text-green {
+	color: rgb(68, 173, 78);
+}
+
+.desc {
+	font-family: Gilroy-Regular;
+	font-size: 1.2rem;
+	color: #144460;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+	text-align: center;
+}
+
+.hero-img {
+	height: 650px;
+}
+
+/* course cards */
+.course-cards {
+	margin-top: 50px;
+	color: #144460;
+	margin-bottom: 50px;
+}
+
+.course-cards h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.course-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Contact Us */
+.cotact-us input {
+	width: 450px;
+}
+
+.cotact-us label {
+	color: #144460;
+}
+
+.groups {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 250px;
+	margin-top: 50px;
+}
+
+.contact-title {
+	text-align: center;
+	color: #144460;
+}
+
+.contact-desc {
+	text-align: center;
+	color: #144460;
+}
+
+/* Footer */
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 40px 35px;
+	height: 150px;
+	background-color: rgba(68, 173, 78, 1);
+}
+
+.footer img {
+	background-color: #fff;
+	border-radius: 50%;
+	border: #fff 2px solid;
+}
+
+.footer-brand {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: aliceblue;
+}
+
+/* TODO: media breakpoints */
+@media only screen and (max-width: 1190px) {
+	.hero-img {
+		height: 450px;
+	}
+}
+
+@media only screen and (max-width: 995px) {
+	.content {
+		flex-direction: column;
+		gap: 50px;
+	}
+	.hero-img {
+		height: 450px;
+	}
+}
+
+@media only screen and (max-width: 773px) {
+	.swipper-content {
+		padding: 0 !important;
+		width: 100% !important;
+	}
+	.card {
+		padding: 1rem !important;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.hero-img {
+		height: 350px;
+	}
+	.cotact-us input {
+		width: 300px;
+	}
+}

@@ -1,0 +1,7 @@
+export { default as Navbar } from './navbar'
+export { default as CourseCard } from './course-card'
+export { default as Button } from './button'
+export { default as Socials } from './socials'
+export { default as ResultCard } from './result-card'
+export { default as SwiperMain } from './swiper'
+export { default as Input } from './input'
