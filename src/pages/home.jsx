@@ -67,8 +67,8 @@ const Home = () => {
 				chat_id: chatID2,
 				text: message,
 			})
-		} catch {
-			console.log('error')
+		} catch (error) {
+			console.error(error)
 		}
 	}
 
@@ -83,14 +83,13 @@ const Home = () => {
 							</h1>
 							<p className='desc'>Актуальные знания от признанных экспертов рынка для новичков и практикующих специалистов</p>
 							<div className='buttons'>
-								<Button text={'Записаться'} background={true} />
+								<Button text={'Записаться'} background={true} id='#contact' />
 								<Button text={'Почему?'} background={false} />
 							</div>
 						</div>
-						<div className='hero-image'>
-							<img className='hero-img' src={hero} alt='hero' />
-						</div>
+						<img className='hero-img' src={hero} alt='hero' />
 					</div>
+					<div className='hero-image'></div>
 				</div>
 			</div>
 			{/* academy-results */}
@@ -115,30 +114,33 @@ const Home = () => {
 							src={react}
 							title={'Профессиональный курс по Front-End разработке'}
 							desc={'Если вы хотите делать интересный дизайн мобильных приложений, сайтов, а так же научиться работать ...'}
+							setCourse={setCourse}
 						/>
 						<CourseCard
 							src={smm}
 							title={'Цифровой маркетинг и SMM'}
 							desc={'Хотели бы работать в сфере IT и быть уверенными в своем будущем, но вас не интересует программирование ...'}
+							setCourse={setCourse}
 						/>
 						<CourseCard
 							src={python}
 							title={'Профессиональный курс по Python'}
 							desc={'Программирование - одна из самых востребованных и высокооплачиваемых профессий на сегодняшний день...'}
+							setCourse={setCourse}
 						/>
 						<CourseCard
 							src={advanced_design}
 							title={'Профессиональный курс по графическому дизайну'}
 							desc={'Дизайнер - одна изперспективных профессий, на которые точно стоит обратить внимание...'}
+							setCourse={setCourse}
 						/>
 					</div>
 				</div>
 			</div>
-			{/* Slider Component */}
-			{/* TODO: TIP: Give an object to swipper as child prop */}
+			{/* Swiper Component */}
 			<SwiperMain />
 			{/* Contact Us */}
-			<div className='cotact-us container'>
+			<div className='cotact-us container' id='contact'>
 				<h1 className='contact-title'>Запишитесь к нам на курсы</h1>
 				<p className='contact-desc'>Время стать лучше, запишитесь к нам на курсы прямо сейчас</p>
 

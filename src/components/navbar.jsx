@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { logo } from '../constants'
 import './components.css'
 import { Button, Socials } from '../components'
@@ -7,21 +8,23 @@ const Navbar = () => {
 		<div className='navbar'>
 			<div className='container'>
 				<div className='first'>
-					<a href='index.html' className='logo'>
+					<a href='/' className='logo'>
 						<img src={logo} alt='logo' height={'35px'} />
 					</a>
 					{/* links */}
 					<div className='links'>
-						<a href='index.html' className='active-link'>
+						<a href='/' className='active-link'>
 							Главная
 						</a>
-						<a href='index.html'> Курсы </a>
-						<a href='index.html'> Почему Мы? </a>
+						<a href='/'> Курсы </a>
+						<Link to='/page/about'>
+							<a href='/'> Почему Мы? </a>
+						</Link>
 					</div>
 				</div>
 				<div className='contact'>
 					<Socials />
-					<Button text={'Записаться'} background={false} />
+					<Button text={'Записаться'} background={false} id='#contact' />
 				</div>
 			</div>
 		</div>

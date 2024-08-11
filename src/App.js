@@ -3,6 +3,7 @@ import { Scrollbars } from 'rc-scrollbars'
 
 import Home from './pages/home'
 import { Navbar } from './components'
+import About from './pages/about'
 
 const App = () => {
 	return (
@@ -11,6 +12,7 @@ const App = () => {
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<Home />} />
+					<Route path='/page/about' element={<About />} />
 				</Routes>
 			</Scrollbars>
 		</>
