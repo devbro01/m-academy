@@ -5,7 +5,10 @@ import Home from './pages/home'
 import {Navbar} from './components'
 import About from './pages/about'
 import {ToastContainer} from 'react-toastify'
-import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import Python from "./pages/python";
+import Design from "./pages/design";
+import Smm from "./pages/smm";
+import Frontend from "./pages/frontend";
 
 const App = () => {
   return (<>
@@ -14,6 +17,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/page/about' element={<About/>}/>
+        {/*Courses*/}
+        <Route path='/course/frontend' element={<Frontend/>}/>
+        <Route path='/course/python' element={<Python/>}/>
+        <Route path='/course/design' element={<Design/>}/>
+        <Route path='/course/smm' element={<Smm/>}/>
       </Routes>
       <ToastContainer/>
     </Scrollbars>

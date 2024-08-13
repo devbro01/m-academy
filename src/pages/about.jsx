@@ -64,7 +64,7 @@ const About = () => {
         />
       </div>
 
-      {/*FIXME: Teachers */}
+      {/* Teachers */}
       <div className='teachers'>
         <h1 className='teachers-title'>Наши учителя</h1>
         <div className='teacher-cards'>
