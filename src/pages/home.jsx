@@ -1,10 +1,11 @@
 import './pages.css'
-import { Button, CourseCard, Input, ResultCard, Socials, SwiperMain } from '../components'
-import { advanced_design, FooterImg, hero, python, react, smm, stats1, stats2, stats3 } from '../constants'
 import { useState } from 'react'
-import axios from 'axios'
+// components
+import { Button, Contact, CourseCard, ResultCard, Socials, SwiperMain } from '../components'
+// images
+import { advanced_design, hero, python, react, smm, stats1, stats2, stats3 } from '../constants'
 // react-toastify
-import { Bounce, ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Home = () => {
@@ -12,65 +13,7 @@ const Home = () => {
 	const [phone, setPhone] = useState('+998 ')
 	const [course, setCourse] = useState('')
 
-	const handleSubmitForm = async event => {
-		event.preventDefault()
-
-		const token = '7257311692:AAHwBW6Zq8-E3rrtBtZDE0KYdqOv24JouZw'
-		const chatID = '5425612601'
-		const chatID2 = '7294480566'
-		const message = `
-			🌟 🇾​​🇦​​🇳​​🇬​​🇮​ ​🇫​​🇴​​🇾​​🇩​​🇦​​🇱​​🇦​​🇳​​🇺​​🇻​​🇨​​🇭​​🇮​ ​🇭​​🇦​​🇧​​🇦​​🇷​​🇮​ 🌟
-
-			👤 ​🇮​​🇸​​🇲​ ​🇫​​🇦​​🇲​​🇮​​🇱​​🇮​​🇾​​🇦​: ${name}
-			📞 ​🇹​​🇪​​🇱​​🇪​​🇫​​🇴​​🇳​: ${phone}
-			📘 ​🇰​​🇺​​🇷​​🇸​ ​🇳​​🇴​​🇲​​🇮​: ${course}
-		`
-
-		try {
-			await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-				chat_id: chatID,
-				text: message,
-			})
-
-			toast.success('Спасибо за отправку!', {
-				position: 'bottom-right',
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-				theme: 'light',
-				transition: Bounce,
-			})
-
-			// Clear form fields
-			setName('')
-			setPhone('+998 ')
-			setCourse('')
-		} catch {
-			toast.error('Ошибка сервера!', {
-				position: 'bottom-right',
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-				theme: 'light',
-				transition: Bounce,
-			})
-		}
-
-		try {
-			await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-				chat_id: chatID2,
-				text: message,
-			})
-		} catch (error) {
-			console.error(error)
-		}
-	}
+	const contactData = { name, setName, course, setCourse, phone, setPhone }
 
 	return (
 		<>
@@ -140,38 +83,12 @@ const Home = () => {
 			{/* Swiper Component */}
 			<SwiperMain />
 			{/* Contact Us */}
-			<div className='cotact-us container' id='contact'>
-				<h1 className='contact-title'>Запишитесь к нам на курсы</h1>
-				<p className='contact-desc'>Время стать лучше, запишитесь к нам на курсы прямо сейчас</p>
-
-				<div className='groups'>
-					<div className='group-left'>
-						<p>Не любите формы? Напишите или позвоните нам</p>
-						<Socials />
-						<img className='my-3' src={FooterImg} alt='footer' />
-					</div>
-					<div className='group-right mb-5'>
-						{/* FIXME: telegram not respond check inbox bot https://t.me/monday_academy_inbox_uz_bot */}
-						<form
-							onSubmit={e => {
-								handleSubmitForm(e)
-							}}
-						>
-							<Input data={name} setData={setName} label={'Полное имя'} type={'text'} placeholder={'Mr Beast...'} />
-							<Input data={phone} setData={setPhone} label={'Номер телефона'} type={'text'} />
-							<Input data={course} setData={setCourse} label={'Курс'} type={'text'} placeholder={'Front End...'} />
-							<Button text={'Submit ✔'} background={true} type={'submit'} />
-						</form>
-					</div>
-				</div>
-			</div>
-
+			<Contact contactData={contactData} />
 			{/* Footer */}
 			<div className='footer'>
 				<h2 className='footer-brand'>OOO "Monday Labs"</h2>
 				<Socials />
 			</div>
-
 			<ToastContainer />
 		</>
 	)

@@ -18,10 +18,16 @@
 	text-decoration: none;
 	padding: 0 5px;
 	color: #969194;
+	transition: all 0.2s !important;
+}
+
+.links a:hover {
+	color: #0066a1;
+	font-size: 20px;
 }
 
 .active-link {
-	color: #144460 !important;
+	color: #144460;
 }
 
 .contact {
@@ -33,6 +39,14 @@
 	display: flex;
 	gap: 15px;
 	margin-right: 35px;
+}
+
+.socials a {
+	transition: all 0.5s !important;
+}
+
+.socials a:hover {
+	transform: translateY(-5px);
 }
 
 /* primary-button */
@@ -133,5 +147,57 @@
 }
 
 .swipper-content-desc {
+	color: #144460;
+}
+
+/* extras item classes */
+.extras-item {
+	display: flex;
+	gap: 150px;
+	align-items: center;
+	justify-content: center;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.extras-text {
+	max-width: 450px;
+	padding: 15px;
+}
+
+.extras-text h1 {
+	color: green;
+}
+
+/* teacher-card */
+.teacher-card {
+	display: flex;
+	max-width: 550px;
+	background: #ffffff !important;
+	box-shadow: 10px 10px 50px rgba(198, 217, 255, 0.3) !important;
+	border-radius: 50px !important;
+	margin-bottom: 30px;
+}
+
+.teacher-card img {
+	border-radius: 50%;
+}
+
+.teacher-name {
+	color: #144460;
+	font-size: 1.25rem;
+}
+
+.teacher-job {
+	font-size: 1rem;
+	color: #aba7a7;
+	margin-bottom: 1rem;
+}
+
+.teacher-desc {
+	font-size: 1rem;
 	color: #144460;
 }

@@ -17,3 +17,8 @@ export { default as python } from '../assets/course-python.png'
 export { default as advanced_design } from '../assets/course-design.png'
 // footer
 export { default as FooterImg } from '../assets/footer-hero.svg'
+// about page extras
+export { default as extra1 } from '../assets/extras-1.svg'
+export { default as extra2 } from '../assets/extras-2.svg'
+// teacher images
+export { default as Odil } from '../assets/odil.jpg'

@@ -114,6 +114,77 @@
 	color: aliceblue;
 }
 
+/* About Us  */
+.about-wrapper {
+	position: relative;
+}
+
+.about-title {
+	text-align-last: center;
+}
+
+.team {
+	width: auto;
+	height: 40rem;
+	background-image: url('https://macademy.uz/assets/img/team.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.about-item {
+	width: 330px;
+	height: 120px;
+	border-radius: 40px 0 40px 0;
+	box-shadow: 0px 0px 20px 4px #81ffd3;
+	padding: 20px;
+	color: #4a4a4a;
+	background: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.first-about {
+	top: 5rem;
+	left: 5rem;
+	position: absolute;
+}
+
+.second-about {
+	top: 35rem;
+	right: 5rem;
+	position: absolute;
+}
+
+/* extras */
+.extras {
+	padding: 50px 0;
+}
+
+.extras-title {
+	color: #144460;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.125;
+}
+
+/* teachers */
+.teacher-cards {
+	display: grid;
+	justify-items: center;
+	padding: 50px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.teachers-title {
+	color: #144460;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.125;
+}
+
 /* TODO: media breakpoints */
 @media only screen and (max-width: 1190px) {
 	.hero-img {
@@ -129,6 +200,9 @@
 	.hero-img {
 		height: 450px;
 	}
+	.teacher-cards {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media only screen and (max-width: 773px) {
@@ -138,6 +212,10 @@
 	}
 	.card {
 		padding: 1rem !important;
+	}
+	.extras-item {
+		flex-direction: column !important;
+		text-align: center !important;
 	}
 }
 
@@ -149,6 +227,3 @@
 		width: 300px;
 	}
 }
-
-/* About Us  */
-
