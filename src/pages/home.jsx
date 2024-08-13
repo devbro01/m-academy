@@ -3,6 +3,7 @@ import './pages.css'
 import { Button, Contact, CourseCard, ResultCard, Socials, SwiperMain } from '../components'
 // images
 import { advanced_design, hero, python, react, smm, stats1, stats2, stats3 } from '../constants'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 	return (
@@ -17,7 +18,9 @@ const Home = () => {
 							<p className='desc'>Актуальные знания от признанных экспертов рынка для новичков и практикующих специалистов</p>
 							<div className='buttons'>
 								<Button text={'Записаться'} background={true} id='#contact' />
-								<Button text={'Почему?'} background={false} />
+								<Link to={'/page/about'}>
+									<Button text={'Почему?'} background={false} />
+								</Link>
 							</div>
 						</div>
 						<img className='hero-img' src={hero} alt='hero' />
