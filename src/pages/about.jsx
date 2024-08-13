@@ -1,16 +1,9 @@
-import { useState } from 'react'
 import Extras from '../components/extras'
 import TeacherCard from '../components/teacher-card'
 import { extra1, extra2, Odil } from '../constants'
-import { Contact } from '../components'
+import { Contact, SwiperMain } from '../components'
 
 const About = () => {
-	const [name, setName] = useState('')
-	const [phone, setPhone] = useState('+998 ')
-	const [course, setCourse] = useState('')
-
-	const contactData = { name, setName, course, setCourse, phone, setPhone }
-
 	return (
 		<>
 			<div className='about-wrapper'>
@@ -195,9 +188,11 @@ const About = () => {
 					/>
 				</div>
 			</div>
-			{/* Contact Us */}
+			{/* Swipper */}
+			<SwiperMain />
 
-			<Contact contactData={contactData} />
+			{/* Contact Us */}
+			<Contact />
 		</>
 	)
 }

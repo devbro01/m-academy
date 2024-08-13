@@ -2,8 +2,13 @@ import { Bounce, toast } from 'react-toastify'
 import { Button, Input, Socials } from './'
 import { FooterImg } from '../constants'
 import axios from 'axios'
+import { useState } from 'react'
 
-const Contact = ({ name, setName, course, setCourse, phone, setPhone }) => {
+const Contact = () => {
+	const [name, setName] = useState('')
+	const [phone, setPhone] = useState('+998 ')
+	const [course, setCourse] = useState('')
+
 	const handleSubmitForm = async event => {
 		event.preventDefault()
 
@@ -85,7 +90,9 @@ const Contact = ({ name, setName, course, setCourse, phone, setPhone }) => {
 						<Input data={name} setData={setName} label={'Полное имя'} type={'text'} placeholder={'Name...'} />
 						<Input data={phone} setData={setPhone} label={'Номер телефона'} type={'text'} />
 						<Input data={course} setData={setCourse} label={'Курс'} type={'text'} placeholder={'Front End...'} />
-						<Button text={'Submit ✔'} background={true} type={'submit'} />
+						<button type='submit' className={`btn primary-button highlight`}>
+							Submit ✔
+						</button>
 					</form>
 				</div>
 			</div>

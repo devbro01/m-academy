@@ -1,20 +1,10 @@
 import './pages.css'
-import { useState } from 'react'
 // components
 import { Button, Contact, CourseCard, ResultCard, Socials, SwiperMain } from '../components'
 // images
 import { advanced_design, hero, python, react, smm, stats1, stats2, stats3 } from '../constants'
-// react-toastify
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 const Home = () => {
-	const [name, setName] = useState('')
-	const [phone, setPhone] = useState('+998 ')
-	const [course, setCourse] = useState('')
-
-	const contactData = { name, setName, course, setCourse, phone, setPhone }
-
 	return (
 		<>
 			<div className='hero'>
@@ -57,25 +47,25 @@ const Home = () => {
 							src={react}
 							title={'Профессиональный курс по Front-End разработке'}
 							desc={'Если вы хотите делать интересный дизайн мобильных приложений, сайтов, а так же научиться работать ...'}
-							setCourse={setCourse}
+							// setCourse={setCourse}
 						/>
 						<CourseCard
 							src={smm}
 							title={'Цифровой маркетинг и SMM'}
 							desc={'Хотели бы работать в сфере IT и быть уверенными в своем будущем, но вас не интересует программирование ...'}
-							setCourse={setCourse}
+							// setCourse={setCourse}
 						/>
 						<CourseCard
 							src={python}
 							title={'Профессиональный курс по Python'}
 							desc={'Программирование - одна из самых востребованных и высокооплачиваемых профессий на сегодняшний день...'}
-							setCourse={setCourse}
+							// setCourse={setCourse}
 						/>
 						<CourseCard
 							src={advanced_design}
 							title={'Профессиональный курс по графическому дизайну'}
 							desc={'Дизайнер - одна изперспективных профессий, на которые точно стоит обратить внимание...'}
-							setCourse={setCourse}
+							// setCourse={setCourse}
 						/>
 					</div>
 				</div>
@@ -83,13 +73,12 @@ const Home = () => {
 			{/* Swiper Component */}
 			<SwiperMain />
 			{/* Contact Us */}
-			<Contact contactData={contactData} />
+			<Contact />
 			{/* Footer */}
 			<div className='footer'>
 				<h2 className='footer-brand'>OOO "Monday Labs"</h2>
 				<Socials />
 			</div>
-			<ToastContainer />
 		</>
 	)
 }
