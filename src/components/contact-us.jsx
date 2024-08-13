@@ -1,5 +1,5 @@
 import { Bounce, toast } from 'react-toastify'
-import { Button, Input, Socials } from './'
+import { Input, Socials } from './'
 import { FooterImg } from '../constants'
 import axios from 'axios'
 import { useState } from 'react'
