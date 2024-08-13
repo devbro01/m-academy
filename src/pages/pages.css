@@ -127,6 +127,7 @@
 	width: auto;
 	height: 40rem;
 	background-image: url('https://macademy.uz/assets/img/team.jpg');
+	border-radius: 25px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -202,6 +203,7 @@
 	}
 	.teacher-cards {
 		grid-template-columns: 1fr;
+		text-align: center;
 	}
 }
 
@@ -216,6 +218,9 @@
 	.extras-item {
 		flex-direction: column !important;
 		text-align: center !important;
+	}
+	.teacher-card {
+		flex-direction: column;
 	}
 }
 

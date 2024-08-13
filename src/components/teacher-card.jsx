@@ -3,7 +3,7 @@ import { instagram, telegram } from '../constants'
 const TeacherCard = ({ image, name, job, desc, teleg, insta }) => {
 	return (
 		<div className='teacher-card m-2'>
-			<img src={image} alt={name} height={150} className='my-auto' />
+			<img src={image} alt={name} width={150} className='my-auto mx-auto' />
 			<div className='p-2'>
 				<div className='teacher-name'>{name}</div>
 				<p className='teacher-job'>{job}</p>
