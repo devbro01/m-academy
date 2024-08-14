@@ -1,0 +1,88 @@
+/* hero */
+.section-hero {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+/* .section-left{
+
+}
+.section-right{
+
+} */
+
+/* Programm Languages or items */
+.programm-wrapper {
+	padding: 100px 0;
+	background-image: url(../assets/comps.svg);
+	background-color: #f5fff9;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.programm-cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.programm-wrapper h1 {
+	color: #144460;
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.125;
+}
+
+.programm-wrapper p {
+	font-family: Gilroy-Regular;
+	color: #144460;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.programm-card {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	max-width: 350px;
+}
+
+/* Students Work */
+.works-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	padding: 50px 0;
+}
+
+.work-image {
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: start;
+	background-size: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.work-card {
+	max-width: 350px;
+	text-align: center;
+}
+
+.work-card h1 {
+	font-weight: 600;
+	font-size: 27px;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.work-card p {
+	font-size: 15px;
+}

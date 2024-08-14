@@ -186,7 +186,9 @@
 	line-height: 1.125;
 }
 
-/* TODO: media breakpoints */
+/* <-> <-> <-> <-> <-> Front-End <-> <-> <-> <-> <-> */
+
+/* media breakpoints */
 @media only screen and (max-width: 1190px) {
 	.hero-img {
 		height: 450px;
@@ -222,6 +224,9 @@
 	.teacher-card {
 		flex-direction: column;
 	}
+	.section-hero img {
+		height: 400px;
+	}
 }
 
 @media only screen and (max-width: 450px) {
@@ -231,4 +236,11 @@
 	.cotact-us input {
 		width: 300px;
 	}
+	.hide-break {
+		display: none;
+	}
+	.section-hero img {
+		height: 350px;
+	}
+
 }

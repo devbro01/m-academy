@@ -89,7 +89,7 @@ const Contact = () => {
 					>
 						<Input data={name} setData={setName} label={'Полное имя'} type={'text'} placeholder={'Name...'} />
 						<Input data={phone} setData={setPhone} label={'Номер телефона'} type={'text'} />
-						<Input data={course} setData={setCourse} label={'Курс'} type={'text'} placeholder={'Front End...'} />
+						<Input data={course} setData={setCourse} label={'Курс'} type={'text'} placeholder={'...'} />
 						<button type='submit' className={`btn primary-button highlight`}>
 							Submit ✔
 						</button>
